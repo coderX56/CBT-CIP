@@ -1,0 +1,245 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Scroll Trigger Example</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+		<script
+			type="text/javascript"
+			src="https://cdn.emailjs.com/dist/email.min.js"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+			rel="stylesheet" />
+	</head>
+	<body class="bg-gradient-to-r from-zinc-950 to-zinc-800 h-screen text-white">
+		<header
+			class="h-14 p-2 text-white bg-zinc-950 fixed top-0 w-full border-b-2 border-zinc-950 z-50">
+			<h1
+				class="text-3xl md:text-4xl text-blue-500 font-mono ml-4 flex justify-center">
+				Portfolio
+			</h1>
+		</header>
+
+		<section
+			id="home"
+			class="grid grid-cols-1 md:grid-cols-2 items-center justify-center h-screen px-4 md:px-8 overflow-hidden">
+			<div class="flex justify-center mt-10 md:mt-0 overflow-hidden">
+				<img
+					src="svgs/avatar.jpg"
+					id="image"
+					class="rounded-full h-44 w-44 md:h-96 md:w-96"
+					alt="Avatar" />
+			</div>
+			<div class="text-center md:text-left md:pl-8">
+				<h1
+					id="heading"
+					class="text-5xl md:text-6xl mt-28 font-mono font-semibold">
+					Aman<br />Tiwari
+				</h1>
+
+				<div class="overflow-hidden">
+					<h2 id="mern" class="text-blue-500 text-2xl md:text-4xl mt-4">
+						MERN Stack Developer
+					</h2>
+				</div>
+				<p class="mt-4 font-mono font-light text-lg md:text-xl">
+					Passionate MERN Stack Developer<br />skilled in building dynamic,<br />high-performance
+					web applications. <br />
+					<br />
+					You are welcomed to my repositry <br />on github for projects overveiw
+				</p>
+				<div class="flex justify-center md:justify-start gap-5 pt-4">
+					<a href="https://github.com/coderX56">
+						<img
+							src="svgs/github.png"
+							class="h-8 md:h-10 bg-white rounded-full"
+							alt="GitHub" />
+					</a>
+					<a href="https://www.linkedin.com/in/yourprofile/">
+						<img src="svgs/linkedin.png" class="h-8 md:h-10" alt="LinkedIn" />
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="about"
+			class="flex flex-col gap-10 md:gap-0 p-5 overflow-hidden">
+			<h1
+				class="text-5xl md:text-6xl font-sans text-cyan-400 text-center mb-8 pt-10 overflow-hidden">
+				About
+			</h1>
+			<div
+				class="flex flex-col gap-12 md:flex-row justify-center items-center gap-6">
+				<div
+					class="flex-shrink-0 flex justify-center items-center overflow-hidden w-32 md:w-52 duration-300 hover:scale-125">
+					<img
+						src="svgs/sun.png"
+						alt="10th Standard"
+						class="shadow-lg scale-1 w-28 md:w-32 h-28 md:h-32 rounded-full" />
+				</div>
+				<p
+					class="bg-zinc-900 rounded-xl p-4 md:w-2/6 text-white shadow-md overflow-hidden">
+					High School<br />
+					Sunbeam School Deoria, Uttar Pradesh, India<br />
+					Central Board of Secondary Education
+				</p>
+			</div>
+
+			<div
+				class="flex flex-col md:flex-row justify-center items-center gap-6 mt-10">
+				<div
+					class="flex-shrink-0 flex justify-center items-center overflow-hidden w-32 md:w-52 duration-300 hover:scale-125">
+					<img
+						src="svgs/van.jpeg"
+						alt="12th Standard"
+						class="shadow-lg w-28 md:w-32 h-28 md:h-32 rounded-full" />
+				</div>
+				<p class="bg-zinc-900 rounded-xl p-4 md:w-2/6 text-white shadow-md">
+					Intermediate<br />
+					Sunbeam School Deoria, Uttar Pradesh, India<br />
+					Central Board of Secondary Education
+				</p>
+			</div>
+
+			<div
+				class="flex flex-col md:flex-row items-center justify-center gap-6 mt-10">
+				<div
+					class="flex-shrink-0 flex justify-center items-center overflow-hidden w-32 md:w-52 duration-300 hover:scale-125">
+					<img
+						src="svgs/iet.jpeg"
+						alt="Graduation"
+						class="shadow-xl w-28 md:w-32 h-28 md:h-32 rounded-full" />
+				</div>
+				<p class="bg-zinc-900 rounded-xl p-4 md:w-2/6 text-white shadow-md">
+					Graduation<br />
+					Institute of Engineering and Technology, Lucknow<br />
+					Electronics and Communication Engineering<br />
+					Uttar Pradesh, India
+				</p>
+			</div>
+		</section>
+		<section id="skills">
+			<div class="bg-gradient-to-r from-zinc-950 to-zinc-800 mt-14">
+				<h1 class="text-3xl font-sans text-cyan-200 text-center">
+					DEVELOPING Skills
+				</h1>
+				<ul
+					id="lists"
+					class="flex flex-wrap justify-center gap-10 overflow-hidden p-10">
+					<li
+						class="flex flex-col items-center shadow-4xl h-48 w-52 bg-zinc-900 p-2 rounded-xl transition duration-250 ease-in-out hover:-translate-y-4 hover:bg-zinc-800">
+						<img
+							src="svgs/html.svg"
+							class="rounded-full h-32 w-32"
+							alt="HTML" />
+						<h2 class="text-3xl font-mono text-white text-center mt-3">HTML</h2>
+					</li>
+					<li
+						class="flex flex-col items-center shadow-4xl h-48 w-56 bg-zinc-900 p-2 rounded-xl transition duration-250 ease-in-out hover:-translate-y-4 hover:bg-zinc-800">
+						<img src="svgs/cs.svg" class="rounded-full h-32 w-32" alt="CSS" />
+						<h2 class="text-3xl font-mono text-white text-center mt-3">CSS</h2>
+					</li>
+					<li
+						class="flex flex-col items-center shadow-4xl h-48 w-52 bg-zinc-900 p-2 rounded-xl transition duration-300 ease-in-out hover:-translate-y-4 hover:bg-zinc-800">
+						<img
+							src="svgs/react.svg"
+							class="rounded-full h-32 w-32"
+							alt="React" />
+						<h2 class="text-3xl font-mono text-white text-center mt-3">
+							React
+						</h2>
+					</li>
+					<li
+						class="flex flex-col items-center shadow-4xl h-48 w-52 bg-zinc-900 p-2 rounded-xl transition duration-300 ease-in-out hover:-translate-y-4 hover:bg-zinc-800">
+						<img
+							src="svgs/nodejs.svg"
+							class="rounded-full h-32 w-32"
+							alt="NodeJs" />
+						<h2 class="text-3xl font-mono text-white text-center mt-3">
+							NodeJs
+						</h2>
+					</li>
+					<li
+						class="flex flex-col items-center shadow-4xl h-48 w-52 bg-zinc-900 p-2 rounded-xl transition duration-300 ease-in-out hover:-translate-y-4 hover:bg-zinc-800">
+						<img
+							src="svgs/mongo.svg"
+							class="rounded-full h-32 w-32"
+							alt="MongoDb" />
+						<h2 class="text-3xl font-mono text-white text-center mt-3">
+							MongoDb
+						</h2>
+					</li>
+					<li
+						class="flex flex-col items-center shadow-4xl h-48 w-52 bg-zinc-900 p-2 mt-0 rounded-xl transition duration-300 ease-in-out hover:-translate-y-4 hover:bg-zinc-800">
+						<img
+							src="svgs/exp.svg"
+							class="rounded-full h-32 w-32"
+							alt="Express" />
+						<h2 class="text-3xl font-mono text-white text-center mt-3">
+							Express
+						</h2>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section
+			id="contact_form"
+			class="grid grid-cols-1 md:grid-cols-2 items-center md:mt-28 justify-around h-screen px-4 md:px-8 overflow-hidden">
+			<div class="text-center md:text-left md:pl-8">
+				<h1 class="flex justify-center text-5xl p-6 text-cyan-100 font-mono">
+					Contact Us...
+				</h1>
+				<form id="form">
+					<div
+						class="flex flex-col justify-center md:justify-center items-center gap-3 p-4 border-r-[1px] border-zinc-600">
+						<input
+							type="text"
+							name="name"
+							id="name"
+							placeholder="Your Name"
+							class="p-2 rounded-md w-96 md:w-96 bg-zinc-500"
+							required />
+						<input
+							type="email"
+							name="email"
+							placeholder="Your Email"
+							class="p-2 rounded-md w-96 md:w-96 bg-zinc-500"
+							required />
+						<input
+							type="text"
+							name="subject"
+							placeholder="Subject"
+							class="p-2 rounded-md w-96 md:w-96 bg-zinc-500"
+							required />
+						<textarea
+							name="message"
+							id="message"
+							placeholder="Your Message"
+							class="p-2 rounded-md w-96 md:w-96 h-24 bg-zinc-500 resize-none"
+							required></textarea>
+						<button
+							type="submit"
+							class="bg-blue-500 text-white p-2 rounded-md w-96">
+							Send Message
+						</button>
+					</div>
+				</form>
+			</div>
+			<div class="flex justify-center">
+				<img
+					src="svgs/contact.svg"
+					id="contact"
+					class="h-44 w-44 md:h-96 md:w-96 mr-44 object-fit"
+					alt="contact" />
+			</div>
+		</section>
+
+		<script src="script.js"></script>
+	</body>
+</html>
