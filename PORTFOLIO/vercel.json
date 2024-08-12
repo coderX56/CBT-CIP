@@ -1,0 +1,14 @@
+{
+	"builds": [
+		{
+			"src": "CBT-CIP/PORTFOLIO/package.json",
+			"use": "@vercel/node"
+		}
+	],
+	"routes": [
+		{
+			"src": "/(.*)",
+			"dest": "/CBT-CIP/PORTFOLIO/$1"
+		}
+	]
+}
