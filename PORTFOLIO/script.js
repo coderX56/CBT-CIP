@@ -267,11 +267,18 @@ document.addEventListener("DOMContentLoaded", () => {
 // 		}
 // 	);
 // });
-emailjs.sendForm("service_p4hts9l", "template_vluzute", "#form").then(
-	(response) => {
-		alert("SUCCESS!", response.status, response.text);
-	},
-	(error) => {
-		alert("FAILED...", error);
-	}
-);
+document.getElementById("form").addEventListener("submit", function (event) {
+	event.preventDefault();
+
+	// Send the form using EmailJS
+	emailjs.sendForm("service_p4hts9l", "template_vluzute", this).then(
+		(response) => {
+			alert(
+				"SUCCESS! Status: " + response.status + ", Message: " + response.text
+			);
+		},
+		(error) => {
+			alert("FAILED... " + JSON.stringify(error));
+		}
+	);
+});
