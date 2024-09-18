@@ -256,14 +256,22 @@ document.addEventListener("DOMContentLoaded", () => {
 	emailjs.init("gwaeGhz4xOceO4tNd");
 })();
 
-document.getElementById("form").addEventListener("submit", function (event) {
-	event.preventDefault();
-	emailjs.sendForm("service_p4hts9l", "template_vluzute", this).then(
-		() => {
-			alert("Message sent successfully!");
-		},
-		(error) => {
-			alert("Failed to send message: " + JSON.stringify(error));
-		}
-	);
-});
+// document.getElementById("form").addEventListener("submit", function (event) {
+// 	event.preventDefault();
+// 	emailjs.sendForm("service_p4hts9l", "template_vluzute", this).then(
+// 		() => {
+// 			alert("Message sent successfully!");
+// 		},
+// 		(error) => {
+// 			alert("Failed to send message: " + JSON.stringify(error));
+// 		}
+// 	);
+// });
+emailjs.sendForm("service_p4hts9l", "template_vluzute", "#form").then(
+	(response) => {
+		alert("SUCCESS!", response.status, response.text);
+	},
+	(error) => {
+		alert("FAILED...", error);
+	}
+);
